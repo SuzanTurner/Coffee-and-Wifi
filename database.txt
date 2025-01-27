@@ -1,0 +1,2 @@
+StarBucks,Civil Lines,5,True,True
+Checkers,Sadar,3,False,True
