@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %}Add A New Cafe{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 col-md-8">
+      <h1 class="display-4">Add a new cafe into the database</h1>
+      
+      <form method="POST" action="{{ url_for('add_cafe') }}">
+        {{ form.hidden_tag() }}
+        
+        <div class="input-group mb-3">
+          <span class="input-group-text">Cafe Name</span>
+          {{ form.name(class="form-control") }}
+        </div>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text">Location</span>
+          {{ form.location(class="form-control") }}
+        </div>
+
+        <div class="input-group mb-3">
+          <span class="input-group-text">Rating</span>
+          {{ form.rating(class="form-control") }}
+        </div>
+
+        <div class="form-check mt-3">
+          {{ form.check_box_wifi(class="form-check-input") }}
+          <label class="form-check-label">WiFi Available</label>
+        </div>
+
+        <div class="form-check">
+          {{ form.check_box_charge(class="form-check-input") }}
+          <label class="form-check-label">Charging Points Available</label>
+        </div>
+
+        <button type="submit" class="btn btn-warning btn-lg mt-3">Save!</button>
+      </form>
+
+      <p><a href="{{ url_for('cafes') }}">See all cafes</a></p>
+    </div>
+  </div>
+</div>
+{% endblock %}
