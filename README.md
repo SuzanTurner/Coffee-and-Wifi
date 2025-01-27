@@ -5,6 +5,7 @@ This web application allows users to add cafes to a local directory, storing ess
 Download the files and store them in the following order:
 
 Coffee_and_WiFi/
+| main.py
 
 │
 
